@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Rock, Paper, Scissors!</title>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+	<!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+
+</head>
+<body>
+	
+	<!-- Jumbotron -->
+	<div class="jumbotron jumbotron-fluid p-2 m-0">
+	  <div class="container">
+	    <h1 class="display-4 text-center">Rock, Paper, Scissors!</h1>
+	    <p class="lead text-center">Get your <span class="text-danger">game</span> on.</p>
+	  </div>
+	</div>
+
+	<br> 
+
+	<div class="container-fluid">
+
+		<div class="row hideAfterStart" id="name-entry-container">
+			<div class="col-5 mx-auto">
+				<!-- Input form -->
+				<div class="card">
+				  <!-- <h5 class="card-header">Enter Name</h5> -->
+				  <div class="card-body">
+				    <form>
+						  <div class="form-row">
+						    <div class="col">
+						      <input type="text" class="form-control" id="player-name-input" placeholder="Enter Name">
+						    </div>
+						    <div class="col-auto">
+						      <button id="start-button" type="submit" class="btn btn-secondary mb-2">Start</button>
+						    </div>
+						  </div>
+						</form>
+				  </div>
+				</div>
+			</div>
+		</div>
+		
+		<br> 
+
+		<div class="row">
+			<div class="col-5 mx-auto">
+				<h4 class="text-center">Hi, <span id="player-name"></span>! You are Player <span id="player-number"></span>.</h4>
+			</div>
+		</div>
+
+		<br> 
+
+		<div class="row">
+			<div class="col-5 mx-auto">
+				<h5 class="text-center">Waiting for <span id="player-name"></span> to choose.</h5>
+			</div>
+		</div>
+		
+		<br>
+
+		<div class="row">
+			<div class="col-4">
+				<div class="card">
+				  <h5 class="card-header text-center">Player 1</h5>
+				  <div class="card-body text-center">
+						<div id="your-buttons">
+							<button class="btn btn-secondary">Rock</button>
+							<button class="btn btn-secondary">Paper</button>
+							<button class="btn btn-secondary">Scissors</button>
+						</div>
+						<p>Wins: <span id="your-wins-count"></span> Losses: <span id="your-losses-count"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-4">
+				<div class="card">
+				  <h5 class="card-header"></h5>
+				  <div class="card-body">
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="card">
+				  <h5 class="card-header text-center">Player 2</h5>
+				  <div class="card-body text-center">
+						<div id="opponent-buttons">
+							<button class="btn btn-danger">Rock</button>
+							<button class="btn btn-danger">Paper</button>
+							<button class="btn btn-danger">Scissors</button>
+						</div>
+						<p>Wins: <span id="opponent-wins-count"></span> Losses: <span id="opponent-losses-count"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Script -->
+  <script src="assets/js/app.js"></script>
+
+
+</body>
+</html>
